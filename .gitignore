@@ -1,0 +1,10 @@
+# IDE Files
+.idea/
+
+# Python cache
+__pycache__/
+
+# Reports & Output
+*.xml
+*.html
+*.iml
