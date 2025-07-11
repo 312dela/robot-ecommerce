@@ -1,6 +1,10 @@
 *** Settings ***
 Library           SeleniumLibrary
 
+*** Variables ***
+${toast}    css=#toast-container
+${password}    Test12345
+
 *** Keywords ***
 Open Application
     Open Browser    https://rahulshettyacademy.com/client    chrome
@@ -19,5 +23,5 @@ Safe Click Element
     Click Element    ${locator}
 
 Wait Toast Is Not Visible
-    Wait Until Element Is Visible    css=#toast-container    timeout=5s
-    Wait Until Element Is Not Visible    css=#toast-container    timeout=5s
+    Wait Until Element Is Visible    ${toast}    timeout=5s
+    Wait Until Element Is Not Visible    ${toast}    timeout=5s
